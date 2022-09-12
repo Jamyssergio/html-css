@@ -35,15 +35,30 @@
         td.num {
             text-align: right;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+        tbody > tr:nth-child(odd) { /* 2n -1*/
+            background-color: lightgray;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: rgba(211, 211, 211, 0.612);
+        }
+
     </style>
 </head>
 <body>
-    <h1>uso de tyabelas brandes</h1>
+    <h1>Uso de tabelas brandes</h1>
     <table>
         <caption>População das unidades federativas</caption>
         <thead>
-            <th>Estado</th>
-            <th>Estado</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">população</th>
         </thead>
         <tbody>
             <tr>
@@ -120,10 +135,11 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eligendi incidunt quos aspernatur, ipsum illum ducimus autem vitae animi, natus vero nemo voluptates voluptatum ad voluptatem distinctio tenetur maxime perferendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus omnis eligendi unde facere, cum, in iste delectus ipsum corrupti neque architecto porro ex accusantium hic dicta adipisci similique doloremque?</p>
 </body>
 </html>
